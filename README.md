@@ -24,3 +24,5 @@
 （8）本通知已发群邮件，对以上流程有问题的同学，可在群邮件中跟帖提问。
 
 赖老师
+
+![配置截图1](https://github.com/shf19961008/Serial-Communication/master/硬件配置截图/1)
