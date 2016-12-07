@@ -25,4 +25,10 @@
 
 赖老师
 
-![配置截图1](https://github.com/shf19961008/Serial-Communication/master/硬件配置截图/1)
+![配置截图1](https://github.com/shf19961008/Serial-Communication/blob/master/%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%88%AA%E5%9B%BE/1.png)
+
+![配置截图2](https://github.com/shf19961008/Serial-Communication/blob/master/%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%88%AA%E5%9B%BE/2.png)
+
+![配置截图3](https://github.com/shf19961008/Serial-Communication/blob/master/%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%88%AA%E5%9B%BE/3.png)
+
+![配置截图4](https://github.com/shf19961008/Serial-Communication/blob/master/%E7%A1%AC%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%88%AA%E5%9B%BE/4.png)
