@@ -1,0 +1,138 @@
+C51 COMPILER V9.55   ________                                                              12/08/2016 16:22:53 PAGE 1   
+
+
+C51 COMPILER V9.55, COMPILATION OF MODULE ________
+NO OBJECT MODULE REQUESTED
+COMPILER INVOKED BY: C:\Program Files (x86)\Keil\C51\BIN\C51.EXE ����ͨ��.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND 
+                    -PRINT(.\Listings\����ͨ��.lst) SRC(.\Objects\����ͨ��.SRC)
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #define uchar unsigned char
+   3          void init_com(){
+   4   1              SCON=0X50;                      //设置串口的工作方式为1
+   5   1              TMOD=0X20;                      //设置计数器工作方式为2
+   6   1              TH1=0Xfd;                   //计数器初始值设置，波特率是9600
+   7   1              TL1=0Xfd;
+   8   1              TR1=1;                                      //打开计数器
+   9   1      }
+  10          
+  11          
+  12          void send_data(uchar *str){
+  13   1              uchar i;
+  14   1              for(i=0;str[i]!='\0';i++){
+  15   2                      SBUF = str[i];
+  16   2                      while(!TI);
+  17   2                      TI = 0;
+  18   2              }
+  19   1      }
+  20          
+  21          void delay_ms(uchar ms)                          //延时程序,延时约ms毫秒
+  22          {    
+  23   1              uchar i,j;
+  24   1              while(ms--)
+  25   1                      for(i = 0 ;i<5; i++)
+  26   1                              for(j=0;j<220;j++);
+  27   1      }
+  28          
+  29          
+  30          
+  31          sbit DS = P2^5;                            //将单片机的P2.5引脚定义为74HC595的串行数据输�
+             -�端
+  32          sbit STCP = P2^6;                          //将单片机的P2.6引脚定义为74HC595的存储寄存器�
+             -�钟输入端
+  33          sbit SHCP = P2^7;                          //将单片机的P2.7引脚定义为74HC595的移位寄存器�
+             -�钟输入端
+  34          
+  35          sbit wx1=P0^4;                                            //位选0，低电平有效，选中第一个数
+             -码管
+  36          sbit wx2=P0^5;                                            //位选1，低电平有效，选中第二个数
+             -码管
+  37          sbit wx3=P0^6;                                            //位选2，低电平有效，选中第三个数
+             -码管
+  38          sbit wx4=P0^7;                                            //位选3，低电平有效，选中第四个数
+             -码管
+  39          /*共阴极数码管显示0~9时的输入数据*/
+  40          uchar table[] = {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f};
+  41          /*数码管显示函数，利用74HC595实现串行输入并行输出*/
+  42          void ser_inout(uchar datas){
+  43   1              uchar i;
+  44   1              STCP = 0;                                     
+  45   1              for(i=0 ; i < 8 ; i++)                   //从高位到低位，依次传送数据
+  46   1              {
+  47   2                      SHCP = 0;                              
+C51 COMPILER V9.55   ________                                                              12/08/2016 16:22:53 PAGE 2   
+
+  48   2                      DS=datas & 0x80;                
+  49   2                      datas<<=1;                            
+  50   2                      SHCP = 1;                              //P2.7引脚置1，产生上升沿，将P2.5引脚上的数据传
+             -入74HC595
+  51   2              }
+  52   1              STCP = 1;                                //P2.6置1，产生上升沿
+  53   1      }
+  54          
+  55          
+  56          void display(uchar *data_arr){
+  57   1              while(1){//一直刷新显示
+  58   2                      wx1=0;
+  59   2                      ser_inout(table[data_arr[0]-'0']);
+  60   2                      delay_ms(1);
+  61   2                      wx1=1;
+  62   2                      
+  63   2                      wx2=0;
+  64   2                      ser_inout(table[data_arr[1]-'0']);
+  65   2                      delay_ms(1);
+  66   2                      wx2=1;
+  67   2                      
+  68   2                      wx3=0;
+  69   2                      ser_inout(table[data_arr[2]-'0']);
+  70   2                      delay_ms(1);
+  71   2                      wx3=1;
+  72   2                      
+  73   2                      wx4=0;
+  74   2                      ser_inout(table[data_arr[3]-'0']);
+  75   2                      delay_ms(1);
+  76   2                      wx4=1;
+  77   2              }
+  78   1      }
+  79          
+  80          void receive_and_display(){
+  81   1              uchar received_data[4],i=0;
+  82   1              while(1){
+  83   2                      //接收数据
+  84   2                      if(RI==1){
+  85   3                              received_data[i]=SBUF;
+  86   3                              RI=0;
+  87   3                              i++;
+  88   3                      }
+  89   2                      //显示数据
+  90   2                      if(i==4){
+  91   3                              display(received_data);
+  92   3                              i=0;
+  93   3                      }
+  94   2              }
+  95   1      }
+  96          
+  97          int main(){
+  98   1          init_com();//初始化串行口设置
+  99   1              send_data("Hello World!");
+ 100   1              receive_and_display();
+ 101   1              return 0;
+ 102   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    201    ----
+   CONSTANT SIZE    =     13    ----
+   XDATA SIZE       =   ----    ----
+C51 COMPILER V9.55   ________                                                              12/08/2016 16:22:53 PAGE 3   
+
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     10       7
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,1 @@
+"串口通信.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\串口通信.lst) SRC (.\Objects\串口通信.SRC)

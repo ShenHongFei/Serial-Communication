@@ -1,0 +1,684 @@
+A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\����ͨ��.OBJ
+ASSEMBLER INVOKED BY: C:\Program Files (x86)\Keil\C51\BIN\A51.EXE .\Objects\����ͨ��.src PR(.\Listings\����ͨ��.ls1) EP 
+                      DEBUG
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ; .\Objects\����ͨ��.SRC generated from: ����ͨ��.c
+                       2     ; COMPILER INVOKED BY:
+                       3     ;        C:\Program Files (x86)\Keil\C51\BIN\C51.EXE ����ͨ��.c OPTIMIZE(8,SPEED) BROWSE DE
+                             BUG OBJECTEXTEND PRINT(.\Listings\����ͨ��.lst) SRC(.\Objects\����ͨ��.SRC)
+                       4     
+                       5     $nomod51 
+                       6     
+                       7     NAME    ________
+                       8     
+  0080                 9     P0      DATA    080H
+  0090                10     P1      DATA    090H
+  00A0                11     P2      DATA    0A0H
+  00B0                12     P3      DATA    0B0H
+  00B4                13     T0      BIT     0B0H.4
+  00D6                14     AC      BIT     0D0H.6
+  00B5                15     T1      BIT     0B0H.5
+  0090                16     T2      BIT     090H.0
+  00AF                17     EA      BIT     0A8H.7
+  00A8                18     IE      DATA    0A8H
+  00CE                19     EXF2    BIT     0C8H.6
+  00B7                20     RD      BIT     0B0H.7
+  00A5                21     DS?     BIT     0A0H.5
+  00AC                22     ES      BIT     0A8H.4
+  00B8                23     IP      DATA    0B8H
+  0098                24     RI      BIT     098H.0
+  00B2                25     INT0    BIT     0B0H.2
+  00D7                26     CY      BIT     0D0H.7
+  0099                27     TI      BIT     098H.1
+  00B3                28     INT1    BIT     0B0H.3
+  0084                29     wx1     BIT     080H.4
+  0085                30     wx2     BIT     080H.5
+  00CB                31     RCAP2H  DATA    0CBH
+  0086                32     wx3     BIT     080H.6
+  00BC                33     PS      BIT     0B8H.4
+  0081                34     SP      DATA    081H
+  0087                35     wx4     BIT     080H.7
+  0091                36     T2EX    BIT     090H.1
+  00D2                37     OV      BIT     0D0H.2
+  00CA                38     RCAP2L  DATA    0CAH
+  00C9                39     C_T2    BIT     0C8H.1
+  00B6                40     WR      BIT     0B0H.6
+  00CD                41     RCLK    BIT     0C8H.5
+  00A7                42     SHCP    BIT     0A0H.7
+  00CC                43     TCLK    BIT     0C8H.4
+  0099                44     SBUF    DATA    099H
+  0087                45     PCON    DATA    087H
+  0098                46     SCON    DATA    098H
+  0089                47     TMOD    DATA    089H
+  0088                48     TCON    DATA    088H
+  00A6                49     STCP    BIT     0A0H.6
+  0089                50     IE0     BIT     088H.1
+  008B                51     IE1     BIT     088H.3
+  00F0                52     B       DATA    0F0H
+  00C8                53     CP_RL2  BIT     0C8H.0
+  00E0                54     ACC     DATA    0E0H
+  00A9                55     ET0     BIT     0A8H.1
+  00AB                56     ET1     BIT     0A8H.3
+A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     2
+
+  008D                57     TF0     BIT     088H.5
+  00AD                58     ET2     BIT     0A8H.5
+  008F                59     TF1     BIT     088H.7
+  00CF                60     TF2     BIT     0C8H.7
+  009A                61     RB8     BIT     098H.2
+  008C                62     TH0     DATA    08CH
+  00A8                63     EX0     BIT     0A8H.0
+  0088                64     IT0     BIT     088H.0
+  008D                65     TH1     DATA    08DH
+  009B                66     TB8     BIT     098H.3
+  00AA                67     EX1     BIT     0A8H.2
+  008A                68     IT1     BIT     088H.2
+  00CD                69     TH2     DATA    0CDH
+  00D0                70     P       BIT     0D0H.0
+  009F                71     SM0     BIT     098H.7
+  008A                72     TL0     DATA    08AH
+  009E                73     SM1     BIT     098H.6
+  008B                74     TL1     DATA    08BH
+  009D                75     SM2     BIT     098H.5
+  00CC                76     TL2     DATA    0CCH
+  00B9                77     PT0     BIT     0B8H.1
+  00BB                78     PT1     BIT     0B8H.3
+  00D3                79     RS0     BIT     0D0H.3
+  00BD                80     PT2     BIT     0B8H.5
+  008C                81     TR0     BIT     088H.4
+  00D4                82     RS1     BIT     0D0H.4
+  008E                83     TR1     BIT     088H.6
+  00CA                84     TR2     BIT     0C8H.2
+  00B8                85     PX0     BIT     0B8H.0
+  00BA                86     PX1     BIT     0B8H.2
+  0083                87     DPH     DATA    083H
+  0082                88     DPL     DATA    082H
+  00CB                89     EXEN2   BIT     0C8H.3
+  009C                90     REN     BIT     098H.4
+  00C8                91     T2CON   DATA    0C8H
+  00B0                92     RXD     BIT     0B0H.0
+  00B1                93     TXD     BIT     0B0H.1
+  00D5                94     F0      BIT     0D0H.5
+  00D0                95     PSW     DATA    0D0H
+                      96     ?PR?init_com?________                    SEGMENT CODE 
+                      97     ?PR?_send_data?________                  SEGMENT CODE 
+                      98     ?DT?_send_data?________                  SEGMENT DATA OVERLAYABLE 
+                      99     ?PR?_delay_ms?________                   SEGMENT CODE 
+                     100     ?PR?_ser_inout?________                  SEGMENT CODE 
+                     101     ?PR?_display?________                    SEGMENT CODE 
+                     102     ?PR?receive_and_display?________         SEGMENT CODE 
+                     103     ?DT?receive_and_display?________         SEGMENT DATA OVERLAYABLE 
+                     104     ?PR?main?________    SEGMENT CODE 
+                     105     ?CO?________         SEGMENT CODE 
+                     106     ?C_INITSEG           SEGMENT CODE 
+                     107     ?DT?________         SEGMENT DATA 
+                     108             EXTRN   CODE (?C?CLDOPTR)
+                     109             EXTRN   CODE (?C?CLDPTR)
+                     110             EXTRN   CODE (?C_STARTUP)
+                     111             PUBLIC  table
+                     112             PUBLIC  main
+                     113             PUBLIC  receive_and_display
+                     114             PUBLIC  _display
+                     115             PUBLIC  _ser_inout
+                     116             PUBLIC  _delay_ms
+                     117             PUBLIC  _send_data
+                     118             PUBLIC  init_com
+                     119     
+----                 120             RSEG  ?DT?_send_data?________
+0000                 121     ?_send_data?BYTE:
+0000                 122             str?140:   DS   3
+A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     3
+
+                     123     
+----                 124             RSEG  ?DT?receive_and_display?________
+0000                 125     ?receive_and_display?BYTE:
+0000                 126     received_data?548:   DS   4
+                     127     
+----                 128             RSEG  ?DT?________
+0000                 129               table:   DS   10
+                     130     
+----                 131             RSEG  ?CO?________
+0000                 132     ?SC_0:
+0000 48656C6C        133             DB  'H' ,'e' ,'l' ,'l' ,'o' ,' ' ,'W' ,'o' ,'r' ,'l' 
+0004 6F20576F                
+0008 726C                    
+000A 642100          134             DB  'd' ,'!' ,000H
+                     135     
+                     136     
+----                 137             RSEG  ?C_INITSEG
+0000 0A              138             DB      00AH
+0001 00       F      139             DB      table
+0002 3F              140             DB      03FH
+0003 06              141             DB      006H
+0004 5B              142             DB      05BH
+0005 4F              143             DB      04FH
+0006 66              144             DB      066H
+0007 6D              145             DB      06DH
+0008 7D              146             DB      07DH
+0009 07              147             DB      007H
+000A 7F              148             DB      07FH
+000B 6F              149             DB      06FH
+                     150     
+                     151     ; #include <reg52.h>
+                     152     ; #define uchar unsigned char
+                     153     ; void init_com(){
+                     154     
+----                 155             RSEG  ?PR?init_com?________
+0000                 156     init_com:
+                     157                             ; SOURCE LINE # 3
+                     158     ;       SCON=0X50;                      //设置串口的工作方式为1
+                     159                             ; SOURCE LINE # 4
+0000 759850          160             MOV     SCON,#050H
+                     161     ;       TMOD=0X20;                      //设置计数器工作方式为2
+                     162                             ; SOURCE LINE # 5
+0003 758920          163             MOV     TMOD,#020H
+                     164     ;       TH1=0Xfd;                   //计数器初始值设置，波特率是9600
+                     165                             ; SOURCE LINE # 6
+0006 758DFD          166             MOV     TH1,#0FDH
+                     167     ;       TL1=0Xfd;
+                     168                             ; SOURCE LINE # 7
+0009 758BFD          169             MOV     TL1,#0FDH
+                     170     ;       TR1=1;                                      //打开计数器
+                     171                             ; SOURCE LINE # 8
+000C D28E            172             SETB    TR1
+                     173     ; }
+                     174                             ; SOURCE LINE # 9
+000E 22              175             RET     
+                     176     ; END OF init_com
+                     177     
+                     178     ; 
+                     179     ; 
+                     180     ; void send_data(uchar *str){
+                     181     
+----                 182             RSEG  ?PR?_send_data?________
+0000                 183     _send_data:
+                     184             USING   0
+                     185                             ; SOURCE LINE # 12
+0000 8B00     F      186             MOV     str?140,R3
+A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     4
+
+0002 8A00     F      187             MOV     str?140+01H,R2
+0004 8900     F      188             MOV     str?140+02H,R1
+                     189     ;       uchar i;
+                     190     ;       for(i=0;str[i]!='\0';i++){
+                     191                             ; SOURCE LINE # 14
+                     192     ;---- Variable 'i?141' assigned to Register 'R7' ----
+0006 E4              193             CLR     A
+0007 FF              194             MOV     R7,A
+0008                 195     ?C0002:
+0008 AB00     F      196             MOV     R3,str?140
+000A AA00     F      197             MOV     R2,str?140+01H
+000C A900     F      198             MOV     R1,str?140+02H
+000E 8F82            199             MOV     DPL,R7
+0010 758300          200             MOV     DPH,#00H
+0013 120000   F      201             LCALL   ?C?CLDOPTR
+0016 600A            202             JZ      ?C0007
+                     203     ;               SBUF = str[i];
+                     204                             ; SOURCE LINE # 15
+0018 F599            205             MOV     SBUF,A
+001A                 206     ?C0005:
+                     207     ;               while(!TI);
+                     208                             ; SOURCE LINE # 16
+001A 3099FD          209             JNB     TI,?C0005
+001D                 210     ?C0006:
+                     211     ;               TI = 0;
+                     212                             ; SOURCE LINE # 17
+001D C299            213             CLR     TI
+                     214     ;       }
+                     215                             ; SOURCE LINE # 18
+001F 0F              216             INC     R7
+0020 80E6            217             SJMP    ?C0002
+                     218     ; }
+                     219                             ; SOURCE LINE # 19
+0022                 220     ?C0007:
+0022 22              221             RET     
+                     222     ; END OF _send_data
+                     223     
+                     224     ; 
+                     225     ; void delay_ms(uchar ms)                                //延时程序,延时约ms毫秒
+                     226     
+----                 227             RSEG  ?PR?_delay_ms?________
+0000                 228     L?0030:
+                     229             USING   0
+0000                 230     L?0031:
+0000 120000   F      231             LCALL   ?C?CLDOPTR
+0003                 232     L?0032:
+0003 2400     F      233             ADD     A,#LOW (table+0FFD0H)
+0005 F8              234             MOV     R0,A
+0006 E6              235             MOV     A,@R0
+0007 FF              236             MOV     R7,A
+0008 120000   F      237             LCALL   _ser_inout
+000B 7F01            238             MOV     R7,#01H
+000D                 239     _delay_ms:
+                     240             USING   0
+                     241                             ; SOURCE LINE # 21
+                     242     ;---- Variable 'i?243' assigned to Register 'R6' ----
+                     243     ;---- Variable 'ms?242' assigned to Register 'R7' ----
+                     244     ; {    
+                     245                             ; SOURCE LINE # 22
+000D                 246     ?C0008:
+                     247     ;       uchar i,j;
+                     248     ;       while(ms--)
+                     249                             ; SOURCE LINE # 24
+000D AD07            250             MOV     R5,AR7
+000F 1F              251             DEC     R7
+0010 ED              252             MOV     A,R5
+A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     5
+
+0011 6011            253             JZ      ?C0016
+                     254     ;               for(i = 0 ;i<5; i++)
+                     255                             ; SOURCE LINE # 25
+0013 E4              256             CLR     A
+0014 FE              257             MOV     R6,A
+0015                 258     ?C0010:
+0015 EE              259             MOV     A,R6
+0016 C3              260             CLR     C
+0017 9405            261             SUBB    A,#05H
+0019 50F2            262             JNC     ?C0008
+                     263     ;                       for(j=0;j<220;j++);
+                     264                             ; SOURCE LINE # 26
+                     265     ;---- Variable 'j?244' assigned to Register 'R5' ----
+001B E4              266             CLR     A
+001C FD              267             MOV     R5,A
+001D                 268     ?C0013:
+001D 0D              269             INC     R5
+001E BDDCFC          270             CJNE    R5,#0DCH,?C0013
+0021                 271     ?C0012:
+0021 0E              272             INC     R6
+0022 80F1            273             SJMP    ?C0010
+                     274     ; }
+                     275                             ; SOURCE LINE # 27
+0024                 276     ?C0016:
+0024 22              277             RET     
+                     278     ; END OF _delay_ms
+                     279     
+                     280     ; 
+                     281     ; 
+                     282     ; 
+                     283     ; sbit DS = P2^5;                            //将单片机的P2.5引脚定义为74HC595的
+                             串行数据输入端
+                     284     ; sbit STCP = P2^6;                          //将单片机的P2.6引脚定义为74HC595的
+                             存储寄存器时钟输入端
+                     285     ; sbit SHCP = P2^7;                          //将单片机的P2.7引脚定义为74HC595的
+                             移位寄存器时钟输入端
+                     286     ; 
+                     287     ; sbit wx1=P0^4;                                            //位选0，低电平有效，�
+                             ��中第一个数码管
+                     288     ; sbit wx2=P0^5;                                            //位选1，低电平有效，�
+                             ��中第二个数码管
+                     289     ; sbit wx3=P0^6;                                            //位选2，低电平有效，�
+                             ��中第三个数码管
+                     290     ; sbit wx4=P0^7;                                            //位选3，低电平有效，�
+                             ��中第四个数码管
+                     291     ; /*共阴极数码管显示0~9时的输入数据*/
+                     292     ; uchar table[] = {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f};
+                     293     ; /*数码管显示函数，利用74HC595实现串行输入并行输出*/
+                     294     ; void ser_inout(uchar datas){
+                     295     
+----                 296             RSEG  ?PR?_ser_inout?________
+0000                 297     _ser_inout:
+                     298             USING   0
+                     299                             ; SOURCE LINE # 42
+                     300     ;---- Variable 'datas?345' assigned to Register 'R7' ----
+                     301     ;       uchar i;
+                     302     ;       STCP = 0;                                     
+                     303                             ; SOURCE LINE # 44
+0000 C2A6            304             CLR     STCP
+                     305     ;       for(i=0 ; i < 8 ; i++)                   //从高位到低位，依次传送数据
+                     306                             ; SOURCE LINE # 45
+                     307     ;---- Variable 'i?346' assigned to Register 'R6' ----
+0002 E4              308             CLR     A
+0003 FE              309             MOV     R6,A
+0004                 310     ?C0017:
+                     311     ;       {
+A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     6
+
+                     312                             ; SOURCE LINE # 46
+                     313     ;               SHCP = 0;                              
+                     314                             ; SOURCE LINE # 47
+0004 C2A7            315             CLR     SHCP
+                     316     ;               DS=datas & 0x80;                
+                     317                             ; SOURCE LINE # 48
+0006 EF              318             MOV     A,R7
+0007 33              319             RLC     A
+0008 92A5            320             MOV     DS?,C
+                     321     ;               datas<<=1;                            
+                     322                             ; SOURCE LINE # 49
+000A EF              323             MOV     A,R7
+000B 25E0            324             ADD     A,ACC
+000D FF              325             MOV     R7,A
+                     326     ;               SHCP = 1;                              //P2.7引脚置1，产生上升沿�
+                             �将P2.5引脚上的数据传入74HC595
+                     327                             ; SOURCE LINE # 50
+000E D2A7            328             SETB    SHCP
+                     329     ;       }
+                     330                             ; SOURCE LINE # 51
+0010 0E              331             INC     R6
+0011 BE08F0          332             CJNE    R6,#08H,?C0017
+0014                 333     ?C0018:
+                     334     ;       STCP = 1;                                //P2.6置1，产生上升沿
+                     335                             ; SOURCE LINE # 52
+0014 D2A6            336             SETB    STCP
+                     337     ; }
+                     338                             ; SOURCE LINE # 53
+0016 22              339             RET     
+                     340     ; END OF _ser_inout
+                     341     
+                     342     ; 
+                     343     ; 
+                     344     ; void display(uchar *data_arr){
+                     345     
+----                 346             RSEG  ?PR?_display?________
+0000                 347     _display:
+                     348             USING   0
+                     349                             ; SOURCE LINE # 56
+                     350     ;---- Variable 'data_arr?447' assigned to Register 'R1/R2/R3' ----
+0000                 351     ?C0021:
+                     352     ;       while(1){//一直刷新显示
+                     353                             ; SOURCE LINE # 57
+                     354     ;               wx1=0;
+                     355                             ; SOURCE LINE # 58
+0000 C284            356             CLR     wx1
+                     357     ;               ser_inout(table[data_arr[0]-'0']);
+                     358                             ; SOURCE LINE # 59
+0002 120000   F      359             LCALL   ?C?CLDPTR
+                     360     ;               delay_ms(1);
+                     361                             ; SOURCE LINE # 60
+0005 120000   F      362             LCALL   L?0032
+                     363     ;               wx1=1;
+                     364                             ; SOURCE LINE # 61
+0008 D284            365             SETB    wx1
+                     366     ;               
+                     367     ;               wx2=0;
+                     368                             ; SOURCE LINE # 63
+000A C285            369             CLR     wx2
+                     370     ;               ser_inout(table[data_arr[1]-'0']);
+                     371                             ; SOURCE LINE # 64
+000C 900001          372             MOV     DPTR,#01H
+                     373     ;               delay_ms(1);
+                     374                             ; SOURCE LINE # 65
+000F 120000   F      375             LCALL   L?0030
+                     376     ;               wx2=1;
+A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     7
+
+                     377                             ; SOURCE LINE # 66
+0012 D285            378             SETB    wx2
+                     379     ;               
+                     380     ;               wx3=0;
+                     381                             ; SOURCE LINE # 68
+0014 C286            382             CLR     wx3
+                     383     ;               ser_inout(table[data_arr[2]-'0']);
+                     384                             ; SOURCE LINE # 69
+0016 900002          385             MOV     DPTR,#02H
+                     386     ;               delay_ms(1);
+                     387                             ; SOURCE LINE # 70
+0019 120000   F      388             LCALL   L?0030
+                     389     ;               wx3=1;
+                     390                             ; SOURCE LINE # 71
+001C D286            391             SETB    wx3
+                     392     ;               
+                     393     ;               wx4=0;
+                     394                             ; SOURCE LINE # 73
+001E C287            395             CLR     wx4
+                     396     ;               ser_inout(table[data_arr[3]-'0']);
+                     397                             ; SOURCE LINE # 74
+0020 900003          398             MOV     DPTR,#03H
+                     399     ;               delay_ms(1);
+                     400                             ; SOURCE LINE # 75
+0023 120000   F      401             LCALL   L?0031
+                     402     ;               wx4=1;
+                     403                             ; SOURCE LINE # 76
+0026 D287            404             SETB    wx4
+                     405     ;       }
+                     406                             ; SOURCE LINE # 77
+0028 80D6            407             SJMP    ?C0021
+                     408     ; END OF _display
+                     409     
+                     410     ; }
+                     411     ; 
+                     412     ; void receive_and_display(){
+                     413     
+----                 414             RSEG  ?PR?receive_and_display?________
+0000                 415     receive_and_display:
+                     416             USING   0
+                     417                             ; SOURCE LINE # 80
+                     418     ;       uchar received_data[4],i=0;
+                     419                             ; SOURCE LINE # 81
+                     420     ;---- Variable 'i?549' assigned to Register 'R7' ----
+0000 E4              421             CLR     A
+0001 FF              422             MOV     R7,A
+0002                 423     ?C0024:
+                     424     ;       while(1){
+                     425                             ; SOURCE LINE # 82
+                     426     ;               //接收数据
+                     427     ;               if(RI==1){
+                     428                             ; SOURCE LINE # 84
+0002 309809          429             JNB     RI,?C0026
+                     430     ;                       received_data[i]=SBUF;
+                     431                             ; SOURCE LINE # 85
+0005 7400     F      432             MOV     A,#LOW (received_data?548)
+0007 2F              433             ADD     A,R7
+0008 F8              434             MOV     R0,A
+0009 A699            435             MOV     @R0,SBUF
+                     436     ;                       RI=0;
+                     437                             ; SOURCE LINE # 86
+000B C298            438             CLR     RI
+                     439     ;                       i++;
+                     440                             ; SOURCE LINE # 87
+000D 0F              441             INC     R7
+                     442     ;               }
+A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     8
+
+                     443                             ; SOURCE LINE # 88
+000E                 444     ?C0026:
+                     445     ;               //显示数据
+                     446     ;               if(i==4){
+                     447                             ; SOURCE LINE # 90
+000E BF04F1          448             CJNE    R7,#04H,?C0024
+                     449     ;                       display(received_data);
+                     450                             ; SOURCE LINE # 91
+0011 7B00            451             MOV     R3,#00H
+0013 7A00     F      452             MOV     R2,#HIGH (received_data?548)
+0015 7900     F      453             MOV     R1,#LOW (received_data?548)
+0017 120000   F      454             LCALL   _display
+                     455     ;                       i=0;
+                     456                             ; SOURCE LINE # 92
+001A E4              457             CLR     A
+001B FF              458             MOV     R7,A
+                     459     ;               }
+                     460                             ; SOURCE LINE # 93
+                     461     ;       }
+                     462                             ; SOURCE LINE # 94
+001C 80E4            463             SJMP    ?C0024
+                     464     ; END OF receive_and_display
+                     465     
+                     466     ; }
+                     467     ; 
+                     468     ; int main(){
+                     469     
+----                 470             RSEG  ?PR?main?________
+0000                 471     main:
+                     472             USING   0
+                     473                             ; SOURCE LINE # 97
+                     474     ;     init_com();//初始化串行口设置
+                     475                             ; SOURCE LINE # 98
+0000 120000   F      476             LCALL   init_com
+                     477     ;       send_data("Hello World!");
+                     478                             ; SOURCE LINE # 99
+0003 7BFF            479             MOV     R3,#0FFH
+0005 7A00     F      480             MOV     R2,#HIGH (?SC_0)
+0007 7900     F      481             MOV     R1,#LOW (?SC_0)
+0009 120000   F      482             LCALL   _send_data
+                     483     ;       receive_and_display();
+                     484                             ; SOURCE LINE # 100
+000C 120000   F      485             LCALL   receive_and_display
+                     486     ;       return 0;
+                     487                             ; SOURCE LINE # 101
+000F E4              488             CLR     A
+0010 FE              489             MOV     R6,A
+0011 FF              490             MOV     R7,A
+                     491     ; }                     ; SOURCE LINE # 102
+0012                 492     ?C0029:
+0012 22              493             RET     
+                     494     ; END OF main
+                     495     
+                     496             END
+A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     9
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E                           T Y P E  V A L U E   ATTRIBUTES
+
+?C0002 . . . . . . . . . . . . .  C ADDR   0008H   R   SEG=?PR?_SEND_DATA?________
+?C0005 . . . . . . . . . . . . .  C ADDR   001AH   R   SEG=?PR?_SEND_DATA?________
+?C0006 . . . . . . . . . . . . .  C ADDR   001DH   R   SEG=?PR?_SEND_DATA?________
+?C0007 . . . . . . . . . . . . .  C ADDR   0022H   R   SEG=?PR?_SEND_DATA?________
+?C0008 . . . . . . . . . . . . .  C ADDR   000DH   R   SEG=?PR?_DELAY_MS?________
+?C0010 . . . . . . . . . . . . .  C ADDR   0015H   R   SEG=?PR?_DELAY_MS?________
+?C0012 . . . . . . . . . . . . .  C ADDR   0021H   R   SEG=?PR?_DELAY_MS?________
+?C0013 . . . . . . . . . . . . .  C ADDR   001DH   R   SEG=?PR?_DELAY_MS?________
+?C0016 . . . . . . . . . . . . .  C ADDR   0024H   R   SEG=?PR?_DELAY_MS?________
+?C0017 . . . . . . . . . . . . .  C ADDR   0004H   R   SEG=?PR?_SER_INOUT?________
+?C0018 . . . . . . . . . . . . .  C ADDR   0014H   R   SEG=?PR?_SER_INOUT?________
+?C0021 . . . . . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?_DISPLAY?________
+?C0024 . . . . . . . . . . . . .  C ADDR   0002H   R   SEG=?PR?RECEIVE_AND_DISPLAY?________
+?C0026 . . . . . . . . . . . . .  C ADDR   000EH   R   SEG=?PR?RECEIVE_AND_DISPLAY?________
+?C0029 . . . . . . . . . . . . .  C ADDR   0012H   R   SEG=?PR?MAIN?________
+?C?CLDOPTR . . . . . . . . . . .  C ADDR   -----       EXT
+?C?CLDPTR. . . . . . . . . . . .  C ADDR   -----       EXT
+?CO?________ . . . . . . . . . .  C SEG    000DH       REL=UNIT
+?C_INITSEG . . . . . . . . . . .  C SEG    000CH       REL=UNIT
+?C_STARTUP . . . . . . . . . . .  C ADDR   -----       EXT
+?DT?RECEIVE_AND_DISPLAY?________  D SEG    0004H       REL=UNIT
+?DT?_SEND_DATA?________. . . . .  D SEG    0003H       REL=UNIT
+?DT?________ . . . . . . . . . .  D SEG    000AH       REL=UNIT
+?PR?INIT_COM?________. . . . . .  C SEG    000FH       REL=UNIT
+?PR?MAIN?________. . . . . . . .  C SEG    0013H       REL=UNIT
+?PR?RECEIVE_AND_DISPLAY?________  C SEG    001EH       REL=UNIT
+?PR?_DELAY_MS?________ . . . . .  C SEG    0025H       REL=UNIT
+?PR?_DISPLAY?________. . . . . .  C SEG    002AH       REL=UNIT
+?PR?_SEND_DATA?________. . . . .  C SEG    0023H       REL=UNIT
+?PR?_SER_INOUT?________. . . . .  C SEG    0017H       REL=UNIT
+?RECEIVE_AND_DISPLAY?BYTE. . . .  D ADDR   0000H   R   SEG=?DT?RECEIVE_AND_DISPLAY?________
+?SC_0. . . . . . . . . . . . . .  C ADDR   0000H   R   SEG=?CO?________
+?_SEND_DATA?BYTE . . . . . . . .  D ADDR   0000H   R   SEG=?DT?_SEND_DATA?________
+AC . . . . . . . . . . . . . . .  B ADDR   00D0H.6 A   
+ACC. . . . . . . . . . . . . . .  D ADDR   00E0H   A   
+AR7. . . . . . . . . . . . . . .  D ADDR   0007H   A   
+B. . . . . . . . . . . . . . . .  D ADDR   00F0H   A   
+CP_RL2 . . . . . . . . . . . . .  B ADDR   00C8H.0 A   
+CY . . . . . . . . . . . . . . .  B ADDR   00D0H.7 A   
+C_T2 . . . . . . . . . . . . . .  B ADDR   00C8H.1 A   
+DPH. . . . . . . . . . . . . . .  D ADDR   0083H   A   
+DPL. . . . . . . . . . . . . . .  D ADDR   0082H   A   
+DS?. . . . . . . . . . . . . . .  B ADDR   00A0H.5 A   
+EA . . . . . . . . . . . . . . .  B ADDR   00A8H.7 A   
+ES . . . . . . . . . . . . . . .  B ADDR   00A8H.4 A   
+ET0. . . . . . . . . . . . . . .  B ADDR   00A8H.1 A   
+ET1. . . . . . . . . . . . . . .  B ADDR   00A8H.3 A   
+ET2. . . . . . . . . . . . . . .  B ADDR   00A8H.5 A   
+EX0. . . . . . . . . . . . . . .  B ADDR   00A8H.0 A   
+EX1. . . . . . . . . . . . . . .  B ADDR   00A8H.2 A   
+EXEN2. . . . . . . . . . . . . .  B ADDR   00C8H.3 A   
+EXF2 . . . . . . . . . . . . . .  B ADDR   00C8H.6 A   
+F0 . . . . . . . . . . . . . . .  B ADDR   00D0H.5 A   
+IE . . . . . . . . . . . . . . .  D ADDR   00A8H   A   
+IE0. . . . . . . . . . . . . . .  B ADDR   0088H.1 A   
+IE1. . . . . . . . . . . . . . .  B ADDR   0088H.3 A   
+INIT_COM . . . . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?INIT_COM?________
+INT0 . . . . . . . . . . . . . .  B ADDR   00B0H.2 A   
+INT1 . . . . . . . . . . . . . .  B ADDR   00B0H.3 A   
+IP . . . . . . . . . . . . . . .  D ADDR   00B8H   A   
+A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE    10
+
+IT0. . . . . . . . . . . . . . .  B ADDR   0088H.0 A   
+IT1. . . . . . . . . . . . . . .  B ADDR   0088H.2 A   
+L?0030 . . . . . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?_DELAY_MS?________
+L?0031 . . . . . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?_DELAY_MS?________
+L?0032 . . . . . . . . . . . . .  C ADDR   0003H   R   SEG=?PR?_DELAY_MS?________
+MAIN . . . . . . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?MAIN?________
+OV . . . . . . . . . . . . . . .  B ADDR   00D0H.2 A   
+P. . . . . . . . . . . . . . . .  B ADDR   00D0H.0 A   
+P0 . . . . . . . . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . . . . . . . . .  D ADDR   00B0H   A   
+PCON . . . . . . . . . . . . . .  D ADDR   0087H   A   
+PS . . . . . . . . . . . . . . .  B ADDR   00B8H.4 A   
+PSW. . . . . . . . . . . . . . .  D ADDR   00D0H   A   
+PT0. . . . . . . . . . . . . . .  B ADDR   00B8H.1 A   
+PT1. . . . . . . . . . . . . . .  B ADDR   00B8H.3 A   
+PT2. . . . . . . . . . . . . . .  B ADDR   00B8H.5 A   
+PX0. . . . . . . . . . . . . . .  B ADDR   00B8H.0 A   
+PX1. . . . . . . . . . . . . . .  B ADDR   00B8H.2 A   
+RB8. . . . . . . . . . . . . . .  B ADDR   0098H.2 A   
+RCAP2H . . . . . . . . . . . . .  D ADDR   00CBH   A   
+RCAP2L . . . . . . . . . . . . .  D ADDR   00CAH   A   
+RCLK . . . . . . . . . . . . . .  B ADDR   00C8H.5 A   
+RD . . . . . . . . . . . . . . .  B ADDR   00B0H.7 A   
+RECEIVED_DATA?548. . . . . . . .  D ADDR   0000H   R   SEG=?DT?RECEIVE_AND_DISPLAY?________
+RECEIVE_AND_DISPLAY. . . . . . .  C ADDR   0000H   R   SEG=?PR?RECEIVE_AND_DISPLAY?________
+REN. . . . . . . . . . . . . . .  B ADDR   0098H.4 A   
+RI . . . . . . . . . . . . . . .  B ADDR   0098H.0 A   
+RS0. . . . . . . . . . . . . . .  B ADDR   00D0H.3 A   
+RS1. . . . . . . . . . . . . . .  B ADDR   00D0H.4 A   
+RXD. . . . . . . . . . . . . . .  B ADDR   00B0H.0 A   
+SBUF . . . . . . . . . . . . . .  D ADDR   0099H   A   
+SCON . . . . . . . . . . . . . .  D ADDR   0098H   A   
+SHCP . . . . . . . . . . . . . .  B ADDR   00A0H.7 A   
+SM0. . . . . . . . . . . . . . .  B ADDR   0098H.7 A   
+SM1. . . . . . . . . . . . . . .  B ADDR   0098H.6 A   
+SM2. . . . . . . . . . . . . . .  B ADDR   0098H.5 A   
+SP . . . . . . . . . . . . . . .  D ADDR   0081H   A   
+STCP . . . . . . . . . . . . . .  B ADDR   00A0H.6 A   
+STR?140. . . . . . . . . . . . .  D ADDR   0000H   R   SEG=?DT?_SEND_DATA?________
+T0 . . . . . . . . . . . . . . .  B ADDR   00B0H.4 A   
+T1 . . . . . . . . . . . . . . .  B ADDR   00B0H.5 A   
+T2 . . . . . . . . . . . . . . .  B ADDR   0090H.0 A   
+T2CON. . . . . . . . . . . . . .  D ADDR   00C8H   A   
+T2EX . . . . . . . . . . . . . .  B ADDR   0090H.1 A   
+TABLE. . . . . . . . . . . . . .  D ADDR   0000H   R   SEG=?DT?________
+TB8. . . . . . . . . . . . . . .  B ADDR   0098H.3 A   
+TCLK . . . . . . . . . . . . . .  B ADDR   00C8H.4 A   
+TCON . . . . . . . . . . . . . .  D ADDR   0088H   A   
+TF0. . . . . . . . . . . . . . .  B ADDR   0088H.5 A   
+TF1. . . . . . . . . . . . . . .  B ADDR   0088H.7 A   
+TF2. . . . . . . . . . . . . . .  B ADDR   00C8H.7 A   
+TH0. . . . . . . . . . . . . . .  D ADDR   008CH   A   
+TH1. . . . . . . . . . . . . . .  D ADDR   008DH   A   
+TH2. . . . . . . . . . . . . . .  D ADDR   00CDH   A   
+TI . . . . . . . . . . . . . . .  B ADDR   0098H.1 A   
+TL0. . . . . . . . . . . . . . .  D ADDR   008AH   A   
+TL1. . . . . . . . . . . . . . .  D ADDR   008BH   A   
+TL2. . . . . . . . . . . . . . .  D ADDR   00CCH   A   
+TMOD . . . . . . . . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . . . . . . . . .  B ADDR   0088H.4 A   
+TR1. . . . . . . . . . . . . . .  B ADDR   0088H.6 A   
+TR2. . . . . . . . . . . . . . .  B ADDR   00C8H.2 A   
+TXD. . . . . . . . . . . . . . .  B ADDR   00B0H.1 A   
+WR . . . . . . . . . . . . . . .  B ADDR   00B0H.6 A   
+A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE    11
+
+WX1. . . . . . . . . . . . . . .  B ADDR   0080H.4 A   
+WX2. . . . . . . . . . . . . . .  B ADDR   0080H.5 A   
+WX3. . . . . . . . . . . . . . .  B ADDR   0080H.6 A   
+WX4. . . . . . . . . . . . . . .  B ADDR   0080H.7 A   
+_DELAY_MS. . . . . . . . . . . .  C ADDR   000DH   R   SEG=?PR?_DELAY_MS?________
+_DISPLAY . . . . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?_DISPLAY?________
+_SEND_DATA . . . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?_SEND_DATA?________
+_SER_INOUT . . . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?_SER_INOUT?________
+________ . . . . . . . . . . . .  N NUMB   -----       
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

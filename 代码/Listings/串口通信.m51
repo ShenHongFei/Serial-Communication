@@ -1,0 +1,385 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/08/2016  16:22:53  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\PROGRAM FILES (X86)\KEIL\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\串口通信.obj TO .\Objects\串口通信 PRINT (
+>> .\Listings\串口通信.m51) RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\串口通信.obj (________)
+
+
+LINK MAP OF MODULE:  .\Objects\串口通信 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000AH     UNIT         ?DT?________
+            DATA    0012H     0004H     UNIT         ?DT?RECEIVE_AND_DISPLAY?________
+            DATA    0016H     0003H     UNIT         ?DT?_SEND_DATA?________
+            IDATA   0019H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     002AH     UNIT         ?PR?_DISPLAY?________
+            CODE    082AH     0025H     UNIT         ?PR?_DELAY_MS?________
+            CODE    084FH     0023H     UNIT         ?PR?_SEND_DATA?________
+            CODE    0872H     001EH     UNIT         ?PR?RECEIVE_AND_DISPLAY?________
+            CODE    0890H     0017H     UNIT         ?PR?_SER_INOUT?________
+            CODE    08A7H     0013H     UNIT         ?PR?MAIN?________
+            CODE    08BAH     000FH     UNIT         ?PR?INIT_COM?________
+            CODE    08C9H     000DH     UNIT         ?CO?________
+            CODE    08D6H     000CH     UNIT         ?C_C51STARTUP
+            CODE    08E2H     000CH     UNIT         ?C_INITSEG
+
+
+
+UNRESOLVED EXTERNAL SYMBOLS:
+   ?C?CLDOPTR
+   ?C?CLDPTR
+   ?C_START
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\串口通信 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:08D6H         SEGMENT       ?C_C51STARTUP
+  I:0019H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/08/2016  16:22:53  PAGE 2
+
+
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:08D9H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:08D6H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:08D6H         LINE#         133
+  C:08D8H         LINE#         134
+  C:08D9H         LINE#         135
+  C:08DAH         LINE#         136
+  C:08DCH         LINE#         185
+  C:08DFH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        ________
+  C:08BAH         SEGMENT       ?PR?INIT_COM?________
+  C:084FH         SEGMENT       ?PR?_SEND_DATA?________
+  D:0016H         SEGMENT       ?DT?_SEND_DATA?________
+  C:082AH         SEGMENT       ?PR?_DELAY_MS?________
+  C:0890H         SEGMENT       ?PR?_SER_INOUT?________
+  C:0800H         SEGMENT       ?PR?_DISPLAY?________
+  C:0872H         SEGMENT       ?PR?RECEIVE_AND_DISPLAY?________
+  D:0012H         SEGMENT       ?DT?RECEIVE_AND_DISPLAY?________
+  C:08A7H         SEGMENT       ?PR?MAIN?________
+  C:08C9H         SEGMENT       ?CO?________
+  C:08E2H         SEGMENT       ?C_INITSEG
+  D:0008H         SEGMENT       ?DT?________
+  C:08BAH         PUBLIC        INIT_COM
+  C:08A7H         PUBLIC        MAIN
+  C:0872H         PUBLIC        RECEIVE_AND_DISPLAY
+  D:0008H         PUBLIC        TABLE
+  C:0837H         PUBLIC        _DELAY_MS
+  C:0800H         PUBLIC        _DISPLAY
+  C:084FH         PUBLIC        _SEND_DATA
+  C:0890H         PUBLIC        _SER_INOUT
+  C:0857H         SYMBOL        ?C0002
+  C:0869H         SYMBOL        ?C0005
+  C:086CH         SYMBOL        ?C0006
+  C:0871H         SYMBOL        ?C0007
+  C:0837H         SYMBOL        ?C0008
+  C:083FH         SYMBOL        ?C0010
+  C:084BH         SYMBOL        ?C0012
+  C:0847H         SYMBOL        ?C0013
+  C:084EH         SYMBOL        ?C0016
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/08/2016  16:22:53  PAGE 3
+
+
+  C:0894H         SYMBOL        ?C0017
+  C:08A4H         SYMBOL        ?C0018
+  C:0800H         SYMBOL        ?C0021
+  C:0874H         SYMBOL        ?C0024
+  C:0880H         SYMBOL        ?C0026
+  C:08B9H         SYMBOL        ?C0029
+  D:0012H         SYMBOL        ?RECEIVE_AND_DISPLAY?BYTE
+  C:08C9H         SYMBOL        ?SC_0
+  D:0016H         SYMBOL        ?_SEND_DATA?BYTE
+  B:00D0H.6       SYMBOL        AC
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  B:00C8H.0       SYMBOL        CP_RL2
+  B:00D0H.7       SYMBOL        CY
+  B:00C8H.1       SYMBOL        C_T2
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  B:00A0H.5       SYMBOL        DS?
+  B:00A8H.7       SYMBOL        EA
+  B:00A8H.4       SYMBOL        ES
+  B:00A8H.1       SYMBOL        ET0
+  B:00A8H.3       SYMBOL        ET1
+  B:00A8H.5       SYMBOL        ET2
+  B:00A8H.0       SYMBOL        EX0
+  B:00A8H.2       SYMBOL        EX1
+  B:00C8H.3       SYMBOL        EXEN2
+  B:00C8H.6       SYMBOL        EXF2
+  B:00D0H.5       SYMBOL        F0
+  D:00A8H         SYMBOL        IE
+  B:0088H.1       SYMBOL        IE0
+  B:0088H.3       SYMBOL        IE1
+  B:00B0H.2       SYMBOL        INT0
+  B:00B0H.3       SYMBOL        INT1
+  D:00B8H         SYMBOL        IP
+  B:0088H.0       SYMBOL        IT0
+  B:0088H.2       SYMBOL        IT1
+  C:082AH         SYMBOL        L?0030
+  C:082AH         SYMBOL        L?0031
+  C:082DH         SYMBOL        L?0032
+  B:00D0H.2       SYMBOL        OV
+  B:00D0H.0       SYMBOL        P
+  D:0080H         SYMBOL        P0
+  D:0090H         SYMBOL        P1
+  D:00A0H         SYMBOL        P2
+  D:00B0H         SYMBOL        P3
+  D:0087H         SYMBOL        PCON
+  B:00B8H.4       SYMBOL        PS
+  D:00D0H         SYMBOL        PSW
+  B:00B8H.1       SYMBOL        PT0
+  B:00B8H.3       SYMBOL        PT1
+  B:00B8H.5       SYMBOL        PT2
+  B:00B8H.0       SYMBOL        PX0
+  B:00B8H.2       SYMBOL        PX1
+  B:0098H.2       SYMBOL        RB8
+  D:00CBH         SYMBOL        RCAP2H
+  D:00CAH         SYMBOL        RCAP2L
+  B:00C8H.5       SYMBOL        RCLK
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/08/2016  16:22:53  PAGE 4
+
+
+  B:00B0H.7       SYMBOL        RD
+  D:0012H         SYMBOL        RECEIVED_DATA?548
+  B:0098H.4       SYMBOL        REN
+  B:0098H.0       SYMBOL        RI
+  B:00D0H.3       SYMBOL        RS0
+  B:00D0H.4       SYMBOL        RS1
+  B:00B0H.0       SYMBOL        RXD
+  D:0099H         SYMBOL        SBUF
+  D:0098H         SYMBOL        SCON
+  B:00A0H.7       SYMBOL        SHCP
+  B:0098H.7       SYMBOL        SM0
+  B:0098H.6       SYMBOL        SM1
+  B:0098H.5       SYMBOL        SM2
+  D:0081H         SYMBOL        SP
+  B:00A0H.6       SYMBOL        STCP
+  D:0016H         SYMBOL        STR?140
+  B:00B0H.4       SYMBOL        T0
+  B:00B0H.5       SYMBOL        T1
+  B:0090H.0       SYMBOL        T2
+  D:00C8H         SYMBOL        T2CON
+  B:0090H.1       SYMBOL        T2EX
+  B:0098H.3       SYMBOL        TB8
+  B:00C8H.4       SYMBOL        TCLK
+  D:0088H         SYMBOL        TCON
+  B:0088H.5       SYMBOL        TF0
+  B:0088H.7       SYMBOL        TF1
+  B:00C8H.7       SYMBOL        TF2
+  D:008CH         SYMBOL        TH0
+  D:008DH         SYMBOL        TH1
+  D:00CDH         SYMBOL        TH2
+  B:0098H.1       SYMBOL        TI
+  D:008AH         SYMBOL        TL0
+  D:008BH         SYMBOL        TL1
+  D:00CCH         SYMBOL        TL2
+  D:0089H         SYMBOL        TMOD
+  B:0088H.4       SYMBOL        TR0
+  B:0088H.6       SYMBOL        TR1
+  B:00C8H.2       SYMBOL        TR2
+  B:00B0H.1       SYMBOL        TXD
+  B:00B0H.6       SYMBOL        WR
+  B:0080H.4       SYMBOL        WX1
+  B:0080H.5       SYMBOL        WX2
+  B:0080H.6       SYMBOL        WX3
+  B:0080H.7       SYMBOL        WX4
+  N:0000H         SYMBOL        ________
+  C:08BAH         LINE#         160
+  C:08BDH         LINE#         163
+  C:08C0H         LINE#         166
+  C:08C3H         LINE#         169
+  C:08C6H         LINE#         172
+  C:08C8H         LINE#         175
+  C:084FH         LINE#         186
+  C:0851H         LINE#         187
+  C:0853H         LINE#         188
+  C:0855H         LINE#         193
+  C:0856H         LINE#         194
+  C:0857H         LINE#         196
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/08/2016  16:22:53  PAGE 5
+
+
+  C:0859H         LINE#         197
+  C:085BH         LINE#         198
+  C:085DH         LINE#         199
+  C:085FH         LINE#         200
+  C:0862H         LINE#         201
+  C:0865H         LINE#         202
+  C:0867H         LINE#         205
+  C:0869H         LINE#         209
+  C:086CH         LINE#         213
+  C:086EH         LINE#         216
+  C:086FH         LINE#         217
+  C:0871H         LINE#         221
+  C:082AH         LINE#         231
+  C:082DH         LINE#         233
+  C:082FH         LINE#         234
+  C:0830H         LINE#         235
+  C:0831H         LINE#         236
+  C:0832H         LINE#         237
+  C:0835H         LINE#         238
+  C:0837H         LINE#         250
+  C:0839H         LINE#         251
+  C:083AH         LINE#         252
+  C:083BH         LINE#         253
+  C:083DH         LINE#         256
+  C:083EH         LINE#         257
+  C:083FH         LINE#         259
+  C:0840H         LINE#         260
+  C:0841H         LINE#         261
+  C:0843H         LINE#         262
+  C:0845H         LINE#         266
+  C:0846H         LINE#         267
+  C:0847H         LINE#         269
+  C:0848H         LINE#         270
+  C:084BH         LINE#         272
+  C:084CH         LINE#         273
+  C:084EH         LINE#         277
+  C:0890H         LINE#         304
+  C:0892H         LINE#         308
+  C:0893H         LINE#         309
+  C:0894H         LINE#         315
+  C:0896H         LINE#         318
+  C:0897H         LINE#         319
+  C:0898H         LINE#         320
+  C:089AH         LINE#         323
+  C:089BH         LINE#         324
+  C:089DH         LINE#         325
+  C:089EH         LINE#         328
+  C:08A0H         LINE#         331
+  C:08A1H         LINE#         332
+  C:08A4H         LINE#         336
+  C:08A6H         LINE#         339
+  C:0800H         LINE#         356
+  C:0802H         LINE#         359
+  C:0805H         LINE#         362
+  C:0808H         LINE#         365
+  C:080AH         LINE#         369
+  C:080CH         LINE#         372
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/08/2016  16:22:53  PAGE 6
+
+
+  C:080FH         LINE#         375
+  C:0812H         LINE#         378
+  C:0814H         LINE#         382
+  C:0816H         LINE#         385
+  C:0819H         LINE#         388
+  C:081CH         LINE#         391
+  C:081EH         LINE#         395
+  C:0820H         LINE#         398
+  C:0823H         LINE#         401
+  C:0826H         LINE#         404
+  C:0828H         LINE#         407
+  C:0872H         LINE#         421
+  C:0873H         LINE#         422
+  C:0874H         LINE#         429
+  C:0877H         LINE#         432
+  C:0879H         LINE#         433
+  C:087AH         LINE#         434
+  C:087BH         LINE#         435
+  C:087DH         LINE#         438
+  C:087FH         LINE#         441
+  C:0880H         LINE#         448
+  C:0883H         LINE#         451
+  C:0885H         LINE#         452
+  C:0887H         LINE#         453
+  C:0889H         LINE#         454
+  C:088CH         LINE#         457
+  C:088DH         LINE#         458
+  C:088EH         LINE#         463
+  C:08A7H         LINE#         476
+  C:08AAH         LINE#         479
+  C:08ACH         LINE#         480
+  C:08AEH         LINE#         481
+  C:08B0H         LINE#         482
+  C:08B3H         LINE#         485
+  C:08B6H         LINE#         488
+  C:08B7H         LINE#         489
+  C:08B8H         LINE#         490
+  C:08B9H         LINE#         493
+  -------         ENDMOD        ________
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  .\Objects\STARTUP.obj (?C_STARTUP)
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  .\Objects\STARTUP.obj (?C_STARTUP)
+    ADDRESS: 08E0H
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C?CLDOPTR
+    MODULE:  .\Objects\串口通信.obj (________)
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C?CLDPTR
+    MODULE:  .\Objects\串口通信.obj (________)
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/08/2016  16:22:53  PAGE 7
+
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C?CLDOPTR
+    MODULE:  .\Objects\串口通信.obj (________)
+    ADDRESS: 0863H
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C?CLDOPTR
+    MODULE:  .\Objects\串口通信.obj (________)
+    ADDRESS: 082BH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C?CLDPTR
+    MODULE:  .\Objects\串口通信.obj (________)
+    ADDRESS: 0803H
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00F1H BYTE (11%) *
+******************************************************************************
+
+Program Size: data=26.0 xdata=0 code=241
+LINK/LOCATE RUN COMPLETE.  7 WARNING(S),  0 ERROR(S)
