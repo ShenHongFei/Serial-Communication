@@ -1,6 +1,6 @@
 ; .\Objects\串口通信.SRC generated from: 串口通信.c
 ; COMPILER INVOKED BY:
-;        C:\Program Files (x86)\Keil\C51\BIN\C51.EXE 串口通信.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\串口通信.lst) SRC(.\Objects\串口通信.SRC)
+;        C:\Program Files (x86)\Keil\C51\BIN\C51.EXE 串口通信.c OPTIMIZE(8,SPEED) BROWSE INCDIR(C:\Program Files (x86)\Keil\C51\INC;C:\Program Files (x86)\Keil\C51\INC) DEBUG OBJECTEXTEND PRINT(.\Listings\串口通信.lst) SRC(.\Objects\串口通信.SRC)
 
 $NOMOD51
 

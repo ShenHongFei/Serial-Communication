@@ -6,8 +6,8 @@ void init_com(){
 	TH1=0Xfd;		    //计数器初始值设置，波特率是9600
 	TL1=0Xfd;
 	TR1=1;					    //打开计数器
-	EA=1;        //总中断允许位
-	ES=1;        //串行口中断允许控制位	
+	ES=1;        //打开接收中断
+    EA=1;        //打开总中断
 }
 
 
@@ -41,10 +41,6 @@ sbit wx4=P0^7;                                            //位选3，低电平�
 /*共阴极数码管显示0~9时的输入数据*/
 uchar table[] = {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f};
 /*数码管显示函数，利用74HC595实现串行输入并行输出*/
-
-uchar display_data[4];
-uchar received_data[4];
-uchar cnt=0;
 void ser_inout(uchar datas){
 	uchar i;
 	STCP = 0;	                              
@@ -59,47 +55,50 @@ void ser_inout(uchar datas){
 }
 
 
-void display(){
+void display(uchar *data_arr){
 	while(1){//一直刷新显示
 		wx1=0;
-		ser_inout(display_data[0]);
+		ser_inout(table[data_arr[0]-'0']);
 		delay_ms(1);
 		wx1=1;
 		
 		wx2=0;
-		ser_inout(display_data[1]);
+		ser_inout(table[data_arr[1]-'0']);
 		delay_ms(1);
 		wx2=1;
 		
 		wx3=0;
-		ser_inout(display_data[2]);
+		ser_inout(table[data_arr[2]-'0']);
 		delay_ms(1);
 		wx3=1;
 		
 		wx4=0;
-		ser_inout(display_data[3]);
+		ser_inout(table[data_arr[3]-'0']);
 		delay_ms(1);
 		wx4=1;
 	}
 }
 
-void update_display() interrupt 4{//串口中断号4，有串口中断时自动调用本函数。
-	uchar i;
-	//接收数据
-	if(RI==1){
-		received_data[cnt%4]=SBUF;
-		cnt++;
-		RI=0;
-	}
-	//更新显示数据
-	if(cnt%4==0){
-		for(i=0;i<4;i++) display_data[i]=table[received_data[i]-'0'];
+void receive_and_display() interrupt 4{
+	uchar received_data[4],i=0;
+	while(1){
+		//接收数据
+		if(RI==1){
+			received_data[i]=SBUF;
+			RI=0;
+			i++;
+		}
+		//显示数据
+		if(i==4){
+			display(received_data);
+			i=0;
+		}
 	}
 }
 
 int main(){
     init_com();//初始化串行口设置
 	send_data("Hello World!");
-	display();//一直显示并等待中断更新显示
+	receive_and_display();
 	return 0;
 }

@@ -1,4 +1,4 @@
-A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     1
+A51 MACRO ASSEMBLER  ________                                                             12/11/2016 13:27:24 PAGE     1
 
 
 MACRO ASSEMBLER A51 V8.02c
@@ -10,8 +10,9 @@ LOC  OBJ            LINE     SOURCE
 
                        1     ; .\Objects\串口通信.SRC generated from: 串口通信.c
                        2     ; COMPILER INVOKED BY:
-                       3     ;        C:\Program Files (x86)\Keil\C51\BIN\C51.EXE 串口通信.c OPTIMIZE(8,SPEED) BROWSE DE
-                             BUG OBJECTEXTEND PRINT(.\Listings\串口通信.lst) SRC(.\Objects\串口通信.SRC)
+                       3     ;        C:\Program Files (x86)\Keil\C51\BIN\C51.EXE 串口通信.c OPTIMIZE(8,SPEED) BROWSE IN
+                             CDIR(C:\Program Files (x86)\Keil\C51\INC;C:\Program Files (x86)\Keil\C51\INC) DEBUG OBJECTE
+                             XTEND PRINT(.\Listings\串口通信.lst) SRC(.\Objects\串口通信.SRC)
                        4     
                        5     $nomod51 
                        6     
@@ -64,9 +65,9 @@ LOC  OBJ            LINE     SOURCE
   00C8                53     CP_RL2  BIT     0C8H.0
   00E0                54     ACC     DATA    0E0H
   00A9                55     ET0     BIT     0A8H.1
-  00AB                56     ET1     BIT     0A8H.3
-A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     2
+A51 MACRO ASSEMBLER  ________                                                             12/11/2016 13:27:24 PAGE     2
 
+  00AB                56     ET1     BIT     0A8H.3
   008D                57     TF0     BIT     088H.5
   00AD                58     ET2     BIT     0A8H.5
   008F                59     TF1     BIT     088H.7
@@ -132,9 +133,9 @@ LOC  OBJ            LINE     SOURCE
                      119     
 ----                 120             RSEG  ?DT?_send_data?________
 0000                 121     ?_send_data?BYTE:
-0000                 122             str?140:   DS   3
-A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     3
+A51 MACRO ASSEMBLER  ________                                                             12/11/2016 13:27:24 PAGE     3
 
+0000                 122             str?140:   DS   3
                      123     
 ----                 124             RSEG  ?DT?receive_and_display?________
 0000                 125     ?receive_and_display?BYTE:
@@ -200,9 +201,9 @@ LOC  OBJ            LINE     SOURCE
 0000                 183     _send_data:
                      184             USING   0
                      185                             ; SOURCE LINE # 12
-0000 8B00     F      186             MOV     str?140,R3
-A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     4
+A51 MACRO ASSEMBLER  ________                                                             12/11/2016 13:27:24 PAGE     4
 
+0000 8B00     F      186             MOV     str?140,R3
 0002 8A00     F      187             MOV     str?140+01H,R2
 0004 8900     F      188             MOV     str?140+02H,R1
                      189     ;       uchar i;
@@ -268,9 +269,9 @@ LOC  OBJ            LINE     SOURCE
                      249                             ; SOURCE LINE # 24
 000D AD07            250             MOV     R5,AR7
 000F 1F              251             DEC     R7
-0010 ED              252             MOV     A,R5
-A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     5
+A51 MACRO ASSEMBLER  ________                                                             12/11/2016 13:27:24 PAGE     5
 
+0010 ED              252             MOV     A,R5
 0011 6011            253             JZ      ?C0016
                      254     ;               for(i = 0 ;i<5; i++)
                      255                             ; SOURCE LINE # 25
@@ -336,9 +337,9 @@ LOC  OBJ            LINE     SOURCE
 0002 E4              308             CLR     A
 0003 FE              309             MOV     R6,A
 0004                 310     ?C0017:
-                     311     ;       {
-A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     6
+A51 MACRO ASSEMBLER  ________                                                             12/11/2016 13:27:24 PAGE     6
 
+                     311     ;       {
                      312                             ; SOURCE LINE # 46
                      313     ;               SHCP = 0;                              
                      314                             ; SOURCE LINE # 47
@@ -404,9 +405,9 @@ LOC  OBJ            LINE     SOURCE
                      373     ;               delay_ms(1);
                      374                             ; SOURCE LINE # 65
 000F 120000   F      375             LCALL   L?0030
-                     376     ;               wx2=1;
-A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     7
+A51 MACRO ASSEMBLER  ________                                                             12/11/2016 13:27:24 PAGE     7
 
+                     376     ;               wx2=1;
                      377                             ; SOURCE LINE # 66
 0012 D285            378             SETB    wx2
                      379     ;               
@@ -472,9 +473,9 @@ LOC  OBJ            LINE     SOURCE
                      439     ;                       i++;
                      440                             ; SOURCE LINE # 87
 000D 0F              441             INC     R7
-                     442     ;               }
-A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     8
+A51 MACRO ASSEMBLER  ________                                                             12/11/2016 13:27:24 PAGE     8
 
+                     442     ;               }
                      443                             ; SOURCE LINE # 88
 000E                 444     ?C0026:
                      445     ;               //鏄剧ず鏁版嵁
@@ -529,7 +530,7 @@ LOC  OBJ            LINE     SOURCE
                      494     ; END OF main
                      495     
                      496             END
-A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE     9
+A51 MACRO ASSEMBLER  ________                                                             12/11/2016 13:27:24 PAGE     9
 
 SYMBOL TABLE LISTING
 ------ ----- -------
@@ -597,7 +598,7 @@ INIT_COM . . . . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?INIT_COM?________
 INT0 . . . . . . . . . . . . . .  B ADDR   00B0H.2 A   
 INT1 . . . . . . . . . . . . . .  B ADDR   00B0H.3 A   
 IP . . . . . . . . . . . . . . .  D ADDR   00B8H   A   
-A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE    10
+A51 MACRO ASSEMBLER  ________                                                             12/11/2016 13:27:24 PAGE    10
 
 IT0. . . . . . . . . . . . . . .  B ADDR   0088H.0 A   
 IT1. . . . . . . . . . . . . . .  B ADDR   0088H.2 A   
@@ -665,7 +666,7 @@ TR1. . . . . . . . . . . . . . .  B ADDR   0088H.6 A
 TR2. . . . . . . . . . . . . . .  B ADDR   00C8H.2 A   
 TXD. . . . . . . . . . . . . . .  B ADDR   00B0H.1 A   
 WR . . . . . . . . . . . . . . .  B ADDR   00B0H.6 A   
-A51 MACRO ASSEMBLER  ________                                                             12/08/2016 16:22:53 PAGE    11
+A51 MACRO ASSEMBLER  ________                                                             12/11/2016 13:27:24 PAGE    11
 
 WX1. . . . . . . . . . . . . . .  B ADDR   0080H.4 A   
 WX2. . . . . . . . . . . . . . .  B ADDR   0080H.5 A   
